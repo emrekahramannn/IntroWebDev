@@ -1,0 +1,256 @@
+:root {
+  /* COLOR Variables */
+  --text-color: #f4eeff;
+  --header-color: #a6b1e1;
+  --bg-color: #424874;
+  --border-color: #dcd6f7;
+
+  --trans: all 0.4s ease-in-out;
+}
+
+html {
+  /* FONT FAMILY */
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--bg-color);
+}
+
+/* IMAGE RESPONSIVE */
+img {
+  width: 100%;
+  height: auto;
+  padding: 2px;
+  background-color: var(--bg-color);
+  border-radius: 4px;
+}
+
+img:hover {
+  transform: scale(1.02);
+  transition: var(--trans);
+}
+
+/* RESET */
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* HELPER */
+.clear-fix {
+  clear: both;
+}
+
+/* HEADER */
+body > header {
+  width: 900px;
+  margin: 0 auto;
+  background-color: var(--header-color);
+  padding: 20px;
+  border-bottom: 8px solid var(--border-color);
+  border-radius: 4px;
+  min-height: 93px;
+}
+
+header > h1 {
+  float: left;
+  color: var(--bg-color);
+  font-weight: 700;
+  font-size: 1.5rem;
+  padding-top: 8px;
+}
+
+header > nav > ul {
+  float: right;
+  list-style: none;
+}
+
+header > nav > ul > li {
+  float: left;
+  margin-right: 15px;
+  padding-top: 5px;
+}
+
+header > nav > ul > li > a {
+  text-decoration: none;
+  color: var(--text-color);
+  background-color: var(--header-color);
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  display: block;
+  padding: 6px 8px;
+  text-transform: uppercase;
+}
+
+header > nav > ul > li > a:hover {
+  color: var(--header-color);
+  background-color: var(--text-color);
+  transition: var(--trans);
+  height: 40px;
+  padding-top: 9px;
+  transform: translateY(-4px);
+}
+
+header > nav > ul > li:last-child > a {
+  background-color: var(--text-color);
+  color: var(--bg-color);
+  transform: none;
+  font-size: 0.9rem;
+  padding: 6px 8px;
+  border: 1px solid var(--bg-color);
+}
+
+header > nav > ul > li:last-child > a:hover {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  height: 32.5px;
+}
+
+/* MAIN  */
+main {
+  background-color: var(--header-color);
+  width: 900px;
+  margin: 15px auto 15px;
+  padding: 20px;
+  min-height: 600px;
+  color: var(--text-color);
+  border-radius: 3px;
+}
+
+main > section,
+main > aside {
+  float: right;
+}
+
+/* SECTION */
+main > section {
+  width: 70%;
+  padding: 20px;
+  border-left: 2px solid var(--border-color);
+  border-radius: 8px;
+}
+
+main > section > article {
+  margin-bottom: 30px;
+}
+
+main > section > article > header {
+  margin-bottom: 6px;
+}
+
+main > section > article > header > h2 {
+  background-color: var(--bg-color);
+  text-align: center;
+  padding: 8px 0;
+  border-radius: 6px;
+}
+
+main > section > article > p {
+  margin: 12px 0;
+}
+
+main > section > article > footer {
+  margin: 18px 0;
+}
+
+main > section > article > footer > a {
+  text-decoration: none;
+  padding: 4px 6px;
+  color: var(--bg-color);
+  background-color: var(--text-color);
+  border-radius: 4px 8px 4px 8px;
+}
+
+main > section > article > footer > a:hover {
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  transition: var(--trans);
+}
+
+/* ASIDE */
+main > aside {
+  width: 30%;
+  padding: 20px;
+}
+
+/* main > aside > nav {
+} */
+
+main > aside > nav > ul {
+  list-style: none;
+}
+
+main > aside > nav > ul > li {
+  margin-bottom: 12px;
+}
+
+main > aside > nav > ul > li > a {
+  display: block;
+  padding: 6px 4px;
+  border-radius: 16px 3px;
+  text-decoration: none;
+  color: var(--bg-color);
+  font-size: 1.1rem;
+  font-weight: 700;
+  background-color: var(--header-color);
+}
+
+main > aside > nav > ul > li > a:hover {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  padding: 4px 4px 6px 12px;
+  transform: translateX(4px);
+  transition: var(--trans);
+}
+
+/* FOOTER */
+body > footer {
+  width: 900px;
+  margin: 0 auto 10px;
+  background-color: var(--header-color);
+  padding: 20px;
+  border-top: 8px solid var(--border-color);
+  border-radius: 4px;
+}
+
+body > footer > p {
+  float: left;
+  font-weight: 700;
+  font-size: 0.8rem;
+  padding-top: 4px;
+}
+
+body > footer > nav {
+  float: right;
+}
+
+body > footer > nav > ul {
+  list-style: none;
+}
+
+body > footer > nav > ul > li {
+  float: left;
+  margin-right: 20px;
+}
+
+body > footer > nav > ul > li > a {
+  color: var(--text-color);
+  font-weight: 700;
+  color: var(--bg-color);
+  display: block;
+  padding-top: 3px;
+}
+
+body > footer > nav > ul > li > a:hover {
+  font-size: 1.1rem;
+  transition: var(--trans);
+}
